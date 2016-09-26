@@ -18,6 +18,6 @@ After opening a new file you can just type `#!` and the interpreter name to add 
 - F#: `#!fsharp` -> `#!/usr/bin/env fsharpi --exec`
 - Ruby: `#!ruby` -> `#!/usr/bin/env ruby`
 
-\!\[Shebang Snippets in action\]\(https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif\)
+![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
 
 If you have already saved your script with appropriate file extension and need the shebang, you can alternatively just start typing `shebang` to complete the line for your script type.

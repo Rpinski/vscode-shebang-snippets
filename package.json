@@ -2,7 +2,7 @@
     "name": "shebang-snippets",
     "displayName": "Shebang Snippets",
     "description": "Snippets for shebang lines for different types of scripts.",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "publisher": "rpinski",
     "author": "Andreas Weizel",
     "repository": {
@@ -14,8 +14,7 @@
         "color": "#1e1e1e"
     },
     "categories": [
-        "Snippets",
-        "Productivity"
+        "Snippets"
     ],
     "engines": {
         "vscode": "^1.0.0"
