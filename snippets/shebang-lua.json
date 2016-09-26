@@ -1,0 +1,16 @@
+{
+    "shebang-lua-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env lua"
+        ],
+        "description": "Adds a shebang for Lua scripts"
+    },
+    "shebang-lua": {
+        "prefix": "#!lua",
+        "body": [
+            "#!/usr/bin/env lua"
+        ],
+        "description": "Adds a shebang for Lua scripts"
+    }
+}

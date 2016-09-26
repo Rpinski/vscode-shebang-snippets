@@ -1,0 +1,67 @@
+{
+    "name": "shebang-snippets",
+    "displayName": "Shebang Snippets",
+    "description": "Snippets for shebang lines for different types of scripts.",
+    "version": "1.0.0",
+    "publisher": "rpinski",
+    "author": "Andreas Weizel",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Rpinski/vscode-shebang-snippets"
+    },
+    "icon": "images/shebang-logo.png",
+    "galleryBanner": {
+        "color": "#1e1e1e"
+    },
+    "categories": [
+        "Snippets",
+        "Productivity"
+    ],
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "plaintext",
+                "path": "./snippets/shebang-plaintext.json"
+            },
+            {
+                "language": "shellscript",
+                "path": "./snippets/shebang-shellscript.json"
+            },
+            {
+                "language": "perl",
+                "path": "./snippets/shebang-perl.json"
+            },
+            {
+                "language": "php",
+                "path": "./snippets/shebang-php.json"
+            },
+            {
+                "language": "lua",
+                "path": "./snippets/shebang-lua.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/shebang-python.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/shebang-javascript.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/shebang-javascript.json"
+            },
+            {
+                "language": "fsharp",
+                "path": "./snippets/shebang-fsharp.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/shebang-ruby.json"
+            }
+        ]
+    }
+}

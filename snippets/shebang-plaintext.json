@@ -1,0 +1,72 @@
+{
+    "shebang-sh": {
+        "prefix": "#!sh",
+        "body": [
+            "#!/bin/sh"
+        ],
+        "description": "Adds a shebang for 'sh' shell scripts"
+    },
+    "shebang-bash": {
+        "prefix": "#!bash",
+        "body": [
+            "#!/bin/bash"
+        ],
+        "description": "Adds a shebang for 'bash' shell scripts"
+    },
+    "shebang-expect": {
+        "prefix": "#!expect",
+        "body": [
+            "#!/usr/bin/expect -f"
+        ],
+        "description": "Adds a shebang for 'expect' scripts"
+    },
+    "shebang-perl": {
+        "prefix": "#!perl",
+        "body": [
+            "#!/usr/bin/env perl"
+        ],
+        "description": "Adds a shebang for Perl scripts"
+    },
+    "shebang-lua": {
+        "prefix": "#!lua",
+        "body": [
+            "#!/usr/bin/env lua"
+        ],
+        "description": "Adds a shebang for Lua scripts"
+    },
+    "shebang-python": {
+        "prefix": "#!python",
+        "body": [
+            "#!/usr/bin/env python"
+        ],
+        "description": "Adds a shebang for Python scripts"
+    },
+    "shebang-php": {
+        "prefix": "#!php",
+        "body": [
+            "#!/usr/bin/env php"
+        ],
+        "description": "Adds a shebang for PHP scripts"
+    },
+    "shebang-node": {
+        "prefix": "#!node",
+        "body": [
+            "#!/usr/bin/env node"
+        ],
+        "description": "Adds a shebang for JavaScript executed with Node.js."
+    },
+    "shebang-fsharp": {
+        "prefix": "#!fsharp",
+        "body": [
+            "#!/usr/bin/env fsharpi --exec"
+        ],
+        "description": "Adds a shebang for F# scripts"
+    },
+    "shebang-ruby": {
+        "prefix": "#!ruby",
+        "body": [
+            "#!/usr/bin/env ruby"
+        ],
+        "description": "Adds a shebang for Ruby scripts"
+    }
+}

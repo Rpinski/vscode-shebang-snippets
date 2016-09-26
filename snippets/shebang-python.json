@@ -1,0 +1,16 @@
+{
+    "shebang-python-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env python"
+        ],
+        "description": "Adds a shebang for Python scripts"
+    },
+    "shebang-python": {
+        "prefix": "#!python",
+        "body": [
+            "#!/usr/bin/env python"
+        ],
+        "description": "Adds a shebang for Python scripts"
+    }
+}

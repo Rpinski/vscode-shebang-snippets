@@ -1,0 +1,16 @@
+{
+    "shebang-fsharp-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env fsharpi --exec"
+        ],
+        "description": "Adds a shebang for F# scripts"
+    },
+    "shebang-fsharp": {
+        "prefix": "#!fsharp",
+        "body": [
+            "#!/usr/bin/env fsharpi --exec"
+        ],
+        "description": "Adds a shebang for F# scripts"
+    }
+}

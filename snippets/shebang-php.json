@@ -1,0 +1,16 @@
+{
+    "shebang-php-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env php"
+        ],
+        "description": "Adds a shebang for PHP scripts"
+    },
+    "shebang-php": {
+        "prefix": "#!php",
+        "body": [
+            "#!/usr/bin/env php"
+        ],
+        "description": "Adds a shebang for PHP scripts"
+    }
+}

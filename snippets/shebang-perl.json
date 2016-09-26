@@ -1,0 +1,16 @@
+{
+    "shebang-perl-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env perl"
+        ],
+        "description": "Adds a shebang for Perl scripts"
+    },
+    "shebang-perl": {
+        "prefix": "#!perl",
+        "body": [
+            "#!/usr/bin/env perl"
+        ],
+        "description": "Adds a shebang for Perl scripts"
+    }
+}

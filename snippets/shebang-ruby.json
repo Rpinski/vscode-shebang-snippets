@@ -1,0 +1,16 @@
+{
+    "shebang-ruby-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env ruby"
+        ],
+        "description": "Adds a shebang for Ruby scripts"
+    },
+    "shebang-ruby": {
+        "prefix": "#!ruby",
+        "body": [
+            "#!/usr/bin/env ruby"
+        ],
+        "description": "Adds a shebang for Ruby scripts"
+    }
+}
