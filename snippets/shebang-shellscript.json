@@ -27,18 +27,18 @@
         ],
         "description": "Adds a shebang for 'bash' shell scripts"
     },
-    "shebang-encoding-utf8-r": {
+    "shebang-encoding-r": {
         "prefix": "shebang",
         "body": [
-            "# -*- coding: utf-8 -*-"
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
-        "description": "Adds a shebang for file encoding in utf-8"
+        "description": "Adds a shebang for file encoding"
     },
-    "shebang-encoding-utf8": {
-        "prefix": "#coding-utf8",
+    "shebang-encoding": {
+        "prefix": "#encoding",
         "body": [
-            "# -*- coding: utf-8 -*-"
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
-        "description": "Adds a shebang for file encoding in utf-8"
+        "description": "Adds a shebang for file encoding"
     }
 }
