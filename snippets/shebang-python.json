@@ -12,5 +12,19 @@
             "#!/usr/bin/env python"
         ],
         "description": "Adds a shebang for Python scripts"
+    },
+    "shebang-encoding-utf8-r": {
+        "prefix": "shebang",
+        "body": [
+            "# -*- coding: utf-8 -*-"
+        ],
+        "description": "Adds a shebang for file encoding in utf-8"
+    },
+    "shebang-encoding-utf8": {
+        "prefix": "#coding-utf8",
+        "body": [
+            "# -*- coding: utf-8 -*-"
+        ],
+        "description": "Adds a shebang for file encoding in utf-8"
     }
 }
