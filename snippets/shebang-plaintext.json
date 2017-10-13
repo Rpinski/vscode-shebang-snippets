@@ -68,5 +68,12 @@
             "#!/usr/bin/env ruby"
         ],
         "description": "Adds a shebang for Ruby scripts"
+    },
+    "shebang-encoding": {
+        "prefix": "#encoding",
+        "body": [
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+        ],
+        "description": "Adds a shebang for file encoding"
     }
 }
