@@ -20,7 +20,11 @@ After opening a new file you can just type `#!` and the interpreter name to add 
 - PHP: `#!php` -> `#!/usr/bin/env php`
 - Node: `#!node` -> `#!/usr/bin/env node`
 - F#: `#!fsharp` -> `#!/usr/bin/env fsharpi --exec`
-- Ruby: `#!ruby` -> `#!/usr/bin/env ruby`
+- Ruby:
+  - `#!ruby` -> `#!/usr/bin/env ruby`
+  - `#!ruby+encoding` ->
+    - `#!/usr/bin/env ruby`
+    - `# -*- coding: $utf-8 -*-`
 
 ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
 
