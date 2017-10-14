@@ -12,7 +12,11 @@ After opening a new file you can just type `#!` and the interpreter name to add 
 - Expect: `#!expect` -> `#!/usr/bin/expect -f`
 - Perl: `#!perl` -> `#!/usr/bin/env perl`
 - Lua: `#!lua` -> `#!/usr/bin/env lua`
-- Python: `#!python` -> `#!/usr/bin/env python`
+- Python:
+  - `#!python` -> `#!/usr/bin/env python`
+  - `#!python+encoding` ->
+    - `#!/usr/bin/env python`
+    - `# -*- coding: $utf-8 -*-`
 - PHP: `#!php` -> `#!/usr/bin/env php`
 - Node: `#!node` -> `#!/usr/bin/env node`
 - F#: `#!fsharp` -> `#!/usr/bin/env fsharpi --exec`

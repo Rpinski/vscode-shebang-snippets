@@ -6,25 +6,26 @@
         ],
         "description": "Adds a shebang for Python scripts"
     },
+    "shebang-python-encoding-r": {
+        "prefix": "shebang+encoding",
+        "body": [
+            "#!/usr/bin/env python",
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+        ],
+        "description": "Adds a shebang for Python scripts"
+    },
     "shebang-python": {
         "prefix": "#!python",
         "body": [
             "#!/usr/bin/env python"
         ],
         "description": "Adds a shebang for Python scripts"
-    },
-    "shebang-encoding-r": {
-        "prefix": "shebang",
-        "body": [
-            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
-        ],
-        "description": "Adds a shebang for file encoding"
-    },
+    },  
     "shebang-encoding": {
         "prefix": "#encoding",
         "body": [
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
-        "description": "Adds a shebang for file encoding"
+        "description": "Adds a magic comment for Python file encoding"
     }
 }

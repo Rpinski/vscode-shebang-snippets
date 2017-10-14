@@ -41,6 +41,14 @@
         ],
         "description": "Adds a shebang for Python scripts"
     },
+    "shebang-python-encoding": {
+        "prefix": "#!python+encoding",
+        "body": [
+            "#!/usr/bin/env python",
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+        ],
+        "description": "Adds a shebang for Python scripts and defines an encoding"
+    },
     "shebang-php": {
         "prefix": "#!php",
         "body": [
@@ -68,12 +76,5 @@
             "#!/usr/bin/env ruby"
         ],
         "description": "Adds a shebang for Ruby scripts"
-    },
-    "shebang-encoding": {
-        "prefix": "#encoding",
-        "body": [
-            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
-        ],
-        "description": "Adds a shebang for file encoding"
     }
 }
