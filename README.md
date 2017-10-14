@@ -16,7 +16,7 @@ After opening a new file you can just type `#!` and the interpreter name to add 
   - `#!python` -> `#!/usr/bin/env python`
   - `#!python+encoding` ->
     - `#!/usr/bin/env python`
-    - `# -*- coding: $utf-8 -*-`
+    - `# -*- coding: utf-8 -*-`
 - PHP: `#!php` -> `#!/usr/bin/env php`
 - Node: `#!node` -> `#!/usr/bin/env node`
 - F#: `#!fsharp` -> `#!/usr/bin/env fsharpi --exec`
@@ -24,7 +24,7 @@ After opening a new file you can just type `#!` and the interpreter name to add 
   - `#!ruby` -> `#!/usr/bin/env ruby`
   - `#!ruby+encoding` ->
     - `#!/usr/bin/env ruby`
-    - `# -*- coding: $utf-8 -*-`
+    - `# -*- coding: utf-8 -*-`
 
 ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
 
