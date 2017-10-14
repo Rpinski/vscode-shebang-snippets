@@ -6,6 +6,14 @@
         ],
         "description": "Adds a shebang for Ruby scripts"
     },
+    "shebang-ruby-encoding-r": {
+        "prefix": "shebang+encoding",
+        "body": [
+            "#!/usr/bin/env ruby",
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+        ],
+        "description": "Adds a shebang and an encoding magic comment for Ruby scripts"
+    },
     "shebang-ruby": {
         "prefix": "#!ruby",
         "body": [
@@ -13,18 +21,19 @@
         ],
         "description": "Adds a shebang for Ruby scripts"
     },
-    "shebang-encoding-r": {
-        "prefix": "shebang",
+    "shebang-ruby-encoding": {
+        "prefix": "#!ruby+encoding",
         "body": [
+            "#!/usr/bin/env ruby",
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
-        "description": "Adds a shebang for file encoding"
+        "description": "Adds a shebang and an encoding magic comment for Ruby scripts"
     },
     "shebang-encoding": {
         "prefix": "#encoding",
         "body": [
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
-        "description": "Adds a shebang for file encoding"
+        "description": "Adds a magic comment for Ruby file encoding"
     }
 }

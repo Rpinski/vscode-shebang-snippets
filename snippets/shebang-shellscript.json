@@ -6,12 +6,28 @@
         ],
         "description": "Adds a shebang for 'sh' shell scripts"
     },
+    "shebang-sh-encoding-r": {
+        "prefix": "shebang-sh+encoding",
+        "body": [
+            "#!/bin/sh",            
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+        ],
+        "description": "Adds a shebang for 'sh' shell scripts and a magic comment for file encoding"
+    },
     "shebang-sh": {
         "prefix": "#!sh",
         "body": [
             "#!/bin/sh"
         ],
         "description": "Adds a shebang for 'sh' shell scripts"
+    },
+    "shebang-sh-encoding": {
+        "prefix": "#!sh+encoding",
+        "body": [
+            "#!/bin/sh",
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"            
+        ],
+        "description": "Adds a shebang for 'sh' shell scripts and a magic comment for file encoding"
     },
     "shebang-bash-r": {
         "prefix": "shebang-bash",
@@ -20,6 +36,14 @@
         ],
         "description": "Adds a shebang for 'bash' shell scripts"
     },
+    "shebang-bash-encoding-r": {
+        "prefix": "shebang-bash+encoding",
+        "body": [
+            "#!/bin/bash",            
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+        ],
+        "description": "Adds a shebang for 'bash' shell scripts and a magic comment for file encoding"
+    },
     "shebang-bash": {
         "prefix": "#!bash",
         "body": [
@@ -27,18 +51,19 @@
         ],
         "description": "Adds a shebang for 'bash' shell scripts"
     },
-    "shebang-encoding-r": {
-        "prefix": "shebang",
+    "shebang-bash-encoding": {
+        "prefix": "#!bash+encoding",
         "body": [
-            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+            "#!/bin/bash",
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"            
         ],
-        "description": "Adds a shebang for file encoding"
+        "description": "Adds a shebang for 'bash' shell scripts and a magic comment for file encoding"
     },
     "shebang-encoding": {
         "prefix": "#encoding",
         "body": [
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
-        "description": "Adds a shebang for file encoding"
+        "description": "Adds a magic comment for file encoding"
     }
 }

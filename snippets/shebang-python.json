@@ -12,15 +12,23 @@
             "#!/usr/bin/env python",
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
-        "description": "Adds a shebang for Python scripts"
-    },
+        "description": "Adds a shebang and an encoding magic comment for Python scripts"
+    }, 
     "shebang-python": {
         "prefix": "#!python",
         "body": [
             "#!/usr/bin/env python"
         ],
         "description": "Adds a shebang for Python scripts"
-    },  
+    },
+    "shebang-python-encoding": {
+        "prefix": "#!python",
+        "body": [
+            "#!/usr/bin/env python",
+            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+        ],
+        "description": "Adds a shebang and an encoding magic comment for Python scripts"
+    },
     "shebang-encoding": {
         "prefix": "#encoding",
         "body": [
