@@ -1,8 +1,8 @@
 ## Release Notes
 
-### 0.0.4
+### 0.1.0
 
-Added support for encoding magic comments in Python scripts (thanks to [Julien Grave](https://github.com/JulienGrv))
+Added support for encoding magic comments in Python, Ruby and shell scripts (thanks to [Julien Grave](https://github.com/JulienGrv))
 
 ### 0.0.3
 

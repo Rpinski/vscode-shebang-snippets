@@ -2,7 +2,7 @@
     "name": "shebang-snippets",
     "displayName": "Shebang Snippets",
     "description": "Snippets for shebang lines for different types of scripts.",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "publisher": "rpinski",
     "author": "Andreas Weizel",
     "repository": {
