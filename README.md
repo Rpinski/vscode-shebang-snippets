@@ -1,6 +1,6 @@
 # Shebang Snippets
 
-Set of snippets for Visual Studio Code to insert "shebang" lines for various types of scripts and interpreters used on Unix-like systems.
+Set of snippets for [Visual Studio Code](https://code.visualstudio.com/) to insert "shebang" lines for various types of scripts and interpreters used on Unix-like systems.
 
 ## Features
 
@@ -27,5 +27,7 @@ After opening a new file you can just type `#!` and the interpreter name to add 
     - `# -*- coding: utf-8 -*-`
 
 ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
+
+To insert the magic comment for encoding (`# -*- coding: utf-8 -*-`) you can also just type `#encoding`. The snippet offers different encodings for selection.
 
 If you have already saved your script with appropriate file extension and need the shebang, you can alternatively just start typing `shebang` to complete the line for your script type.
