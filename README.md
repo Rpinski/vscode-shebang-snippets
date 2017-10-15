@@ -1,5 +1,7 @@
 # Shebang Snippets
 
+[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/rpinski.shebang-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=rpinski.shebang-snippets)
+
 Set of snippets for [Visual Studio Code](https://code.visualstudio.com/) to insert "shebang" lines for various types of scripts and interpreters used on Unix-like systems.
 
 ## Features
