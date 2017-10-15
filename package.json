@@ -17,6 +17,10 @@
     "categories": [
         "Snippets"
     ],
+    "keywords": [
+        "Snippet", "Script", "Shebang", "Comment",
+        "Shell", "Bash", "Lua", "Ruby", "Python", "F#", "FSharp", "Perl", "JS", "JavaScript"
+    ],
     "engines": {
         "vscode": "^1.16.0"
     },
