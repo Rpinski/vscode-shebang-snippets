@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.1.1
+
+Using `#!/usr/bin/env sh` instead of `#!/usr/bin/sh` (also for bash) - thanks to [Andrii Melekhovskiy](https://github.com/morkot))
+
 ### 0.1.0
 
 Added support for encoding magic comments in Python, Ruby and shell scripts (thanks to [Julien Grave](https://github.com/JulienGrv))
