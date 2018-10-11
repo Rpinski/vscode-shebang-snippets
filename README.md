@@ -9,8 +9,8 @@ Set of snippets for [Visual Studio Code](https://code.visualstudio.com/) to inse
 After opening a new file you can just type `#!` and the interpreter name to add the full line. Currently supported shebang snippets:
 
 - Shell:
-  - `#!sh` -> `#!/bin/sh`
-  - `#!bash` -> `#!/bin/bash`
+  - `#!sh` -> `#!/usr/bin/env sh`
+  - `#!bash` -> `#!/usr/bin/env bash`
 - Expect: `#!expect` -> `#!/usr/bin/expect -f`
 - Perl: `#!perl` -> `#!/usr/bin/env perl`
 - Lua: `#!lua` -> `#!/usr/bin/env lua`

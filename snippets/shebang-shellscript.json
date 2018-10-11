@@ -2,14 +2,14 @@
     "shebang-sh-r": {
         "prefix": "shebang-sh",
         "body": [
-            "#!/bin/sh"
+            "#!/usr/bin/env sh"
         ],
         "description": "Adds a shebang for 'sh' shell scripts"
     },
     "shebang-sh-encoding-r": {
         "prefix": "shebang-sh+encoding",
         "body": [
-            "#!/bin/sh",            
+            "#!/usr/bin/env sh",            
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
         "description": "Adds a shebang for 'sh' shell scripts and a magic comment for file encoding"
@@ -17,14 +17,14 @@
     "shebang-sh": {
         "prefix": "#!sh",
         "body": [
-            "#!/bin/sh"
+            "#!/usr/bin/env sh"
         ],
         "description": "Adds a shebang for 'sh' shell scripts"
     },
     "shebang-sh-encoding": {
         "prefix": "#!sh+encoding",
         "body": [
-            "#!/bin/sh",
+            "#!/usr/bin/env sh",
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"            
         ],
         "description": "Adds a shebang for 'sh' shell scripts and a magic comment for file encoding"
@@ -32,14 +32,14 @@
     "shebang-bash-r": {
         "prefix": "shebang-bash",
         "body": [
-            "#!/bin/bash"
+            "#!/usr/bin/env bash"
         ],
         "description": "Adds a shebang for 'bash' shell scripts"
     },
     "shebang-bash-encoding-r": {
         "prefix": "shebang-bash+encoding",
         "body": [
-            "#!/bin/bash",            
+            "#!/usr/bin/env bash",            
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
         ],
         "description": "Adds a shebang for 'bash' shell scripts and a magic comment for file encoding"
@@ -47,14 +47,14 @@
     "shebang-bash": {
         "prefix": "#!bash",
         "body": [
-            "#!/bin/bash"
+            "#!/usr/bin/env bash"
         ],
         "description": "Adds a shebang for 'bash' shell scripts"
     },
     "shebang-bash-encoding": {
         "prefix": "#!bash+encoding",
         "body": [
-            "#!/bin/bash",
+            "#!/usr/bin/env bash",
             "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"            
         ],
         "description": "Adds a shebang for 'bash' shell scripts and a magic comment for file encoding"

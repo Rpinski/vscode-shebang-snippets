@@ -2,14 +2,14 @@
     "shebang-sh": {
         "prefix": "#!sh",
         "body": [
-            "#!/bin/sh"
+            "#!/usr/bin/env sh"
         ],
         "description": "Adds a shebang for 'sh' shell scripts"
     },
     "shebang-bash": {
         "prefix": "#!bash",
         "body": [
-            "#!/bin/bash"
+            "#!/usr/bin/env bash"
         ],
         "description": "Adds a shebang for 'bash' shell scripts"
     },
