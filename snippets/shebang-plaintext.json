@@ -37,15 +37,15 @@
     "shebang-python": {
         "prefix": "#!python",
         "body": [
-            "#!/usr/bin/env python"
+            "#!/usr/bin/env ${1|python3,python|}"
         ],
         "description": "Adds a shebang for Python scripts"
     },
     "shebang-python-encoding": {
         "prefix": "#!python+encoding",
         "body": [
-            "#!/usr/bin/env python",
-            "# -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
+            "#!/usr/bin/env ${1|python3,python|}",
+            "# -*- coding: ${2|utf-8,latin-1,ascii|} -*-"
         ],
         "description": "Adds a shebang for Python scripts and defines an encoding"
     },
