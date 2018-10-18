@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.1.2
+
+Added choice between `python3` and `python` in Python shebang snippets. ([#4](https://github.com/Rpinski/vscode-shebang-snippets/issues/4))
+
 ### 0.1.1
 
 Using `#!/usr/bin/env sh` instead of `#!/usr/bin/sh` (also for bash) - thanks to [Andrii Melekhovskiy](https://github.com/morkot))
