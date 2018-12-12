@@ -27,6 +27,7 @@ After opening a new file you can just type `#!` and the interpreter name to add 
   - `#!ruby+encoding` ->
     - `#!/usr/bin/env ruby`
     - `# -*- coding: utf-8 -*-`
+- Groovy: `#!groovy` -> `#!/usr/bin/env groovy`
 
 ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
 

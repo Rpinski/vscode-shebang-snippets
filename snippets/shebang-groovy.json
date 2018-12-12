@@ -1,0 +1,16 @@
+{
+    "shebang-groovy-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env groovy"
+        ],
+        "description": "Adds a shebang for Groovy scripts"
+    },
+    "shebang-groovy": {
+        "prefix": "#!groovy",
+        "body": [
+            "#!/usr/bin/env groovy"
+        ],
+        "description": "Adds a shebang for Groovy scripts"
+    }
+}

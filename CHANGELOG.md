@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.1.3
+
+Added shebang snippets for Groovy.
+
 ### 0.1.2
 
 Added choice between `python3` and `python` in Python shebang snippets. ([#4](https://github.com/Rpinski/vscode-shebang-snippets/issues/4))
