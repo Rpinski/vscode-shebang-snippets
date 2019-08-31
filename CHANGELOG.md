@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.1.4
+
+Added shebang snippets for PowerShell Core.
+
 ### 0.1.3
 
 Added shebang snippets for Groovy.

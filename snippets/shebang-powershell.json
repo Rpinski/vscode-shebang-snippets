@@ -1,0 +1,23 @@
+{
+    "shebang-powershell-r": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env pwsh"
+        ],
+        "description": "Adds a shebang for PowerShell Core scripts."
+    },
+    "shebang-powershell": {
+        "prefix": "#!powershell",
+        "body": [
+            "#!/usr/bin/env pwsh"
+        ],
+        "description": "Adds a shebang for PowerShell Core scripts."
+    },
+    "shebang-pwsh": {
+        "prefix": "#!pwsh",
+        "body": [
+            "#!/usr/bin/env pwsh"
+        ],
+        "description": "Adds a shebang for PowerShell Core scripts."
+    }
+}

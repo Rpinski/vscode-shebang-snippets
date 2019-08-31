@@ -28,6 +28,7 @@ After opening a new file you can just type `#!` and the interpreter name to add 
     - `#!/usr/bin/env ruby`
     - `# -*- coding: utf-8 -*-`
 - Groovy: `#!groovy` -> `#!/usr/bin/env groovy`
+- PowerShell Core: `#!pwsh` or `#!powershell` -> `#!/usr/bin/env pwsh`
 
 ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
 

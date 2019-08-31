@@ -69,6 +69,10 @@
             {
                 "language": "groovy",
                 "path": "./snippets/shebang-groovy.json"
+            },
+            {
+                "language": "powershell",
+                "path": "./snippets/shebang-powershell.json"
             }
         ]
     }
