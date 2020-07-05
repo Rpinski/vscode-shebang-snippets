@@ -6,7 +6,14 @@ Set of snippets for [Visual Studio Code](https://code.visualstudio.com/) to inse
 
 ## Features
 
-After opening a new file you can just type `shebang` or `shebang+encoding` and the interpreter name to add the full line. Currently supported shebang snippets:
+After opening a new file you can just type:
+
+- `shebang` if the file type is detected
+    ![Shebang Snippets in action](https://user-images.githubusercontent.com/1767539/31865808-113720ae-b775-11e7-9267-e9c722ef4ac2.png)
+- `#!` and the interpreter name if the file type is **NOT** detected
+    ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
+
+to add the full line. Currently supported shebang snippets:
 
 - Shell:
   - `#!sh` -> `#!/usr/bin/env sh`
@@ -29,8 +36,6 @@ After opening a new file you can just type `shebang` or `shebang+encoding` and t
     - `# -*- coding: utf-8 -*-`
 - Groovy: `#!groovy` -> `#!/usr/bin/env groovy`
 - PowerShell Core: `#!pwsh` or `#!powershell` -> `#!/usr/bin/env pwsh`
-
-![Shebang Snippets in action](https://user-images.githubusercontent.com/1767539/31865808-113720ae-b775-11e7-9267-e9c722ef4ac2.png)
 
 To insert the magic comment for encoding (`# -*- coding: utf-8 -*-`) you can also just type `#encoding`. The snippet offers different encodings for selection.
 
