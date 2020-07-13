@@ -8,8 +8,9 @@ Set of snippets for [Visual Studio Code](https://code.visualstudio.com/) to inse
 
 After opening a new file you can just type:
 
-- `shebang` if the file type is detected
+- `#!` or `shebang` if the file type is detected
     ![Shebang Snippets in action](https://user-images.githubusercontent.com/1767539/31865808-113720ae-b775-11e7-9267-e9c722ef4ac2.png)
+    Note: For most of the supported languages `#` means the beginning of a comment, so there you always have to press `CTRL` + `SPACE` after `#!` to see the snippet due to VSCode behavior with comments.
 - `#!` and the interpreter name if the file type is **NOT** detected
     ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
 
