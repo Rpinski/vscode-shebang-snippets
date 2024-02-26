@@ -6,5 +6,5 @@ SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
 mkdir ./artifacts
 
 npm version --git-tag-version false --allow-same-version true -- $SEMVER
-npm install @vscode/vsce -g
+npm install
 vsce package -o ./artifacts/shebang-snippets-$SEMVER.vsix

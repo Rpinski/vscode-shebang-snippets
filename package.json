@@ -87,5 +87,11 @@
                 "path": "./snippets/shebang-powershell.json"
             }
         ]
+    },
+    "scripts": {
+        "deploy:vscode-marketplace": "vsce publish"
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^2.24.0"
     }
 }
