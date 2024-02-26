@@ -89,6 +89,7 @@
         ]
     },
     "scripts": {
+        "package": "vsce package",
         "deploy:vscode-marketplace": "vsce publish"
     },
     "devDependencies": {

@@ -7,4 +7,4 @@ mkdir ./artifacts
 
 npm version --git-tag-version false --allow-same-version true -- $SEMVER
 npm install
-vsce package -o ./artifacts/shebang-snippets-$SEMVER.vsix
+npm run package -- -o ./artifacts/shebang-snippets-$SEMVER.vsix
