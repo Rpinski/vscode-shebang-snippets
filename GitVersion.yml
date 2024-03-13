@@ -1,7 +1,7 @@
 assembly-versioning-scheme: MajorMinorPatch
 assembly-file-versioning-format: '{Major}.{Minor}.{Patch}.{WeightedPreReleaseNumber ?? 0}'
 mode: ContinuousDeployment
-next-version: 0.1.5
+next-version: 1.0.0
 tag-pre-release-weight: 10000
 branches:
   main:

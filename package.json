@@ -1,98 +1,71 @@
 {
-    "name": "shebang-snippets",
-    "displayName": "Shebang Snippets",
-    "description": "Snippets for shebang lines for different types of scripts.",
-    "version": "0.1.4",
-    "publisher": "rpinski",
-    "author": "Andreas Weizel",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Rpinski/vscode-shebang-snippets"
-    },
-    "icon": "images/shebang-logo.png",
-    "galleryBanner": {
-        "color": "#1e1e1e",
-        "theme": "dark"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "keywords": [
-        "Snippet",
-        "Script",
-        "Shebang",
-        "Comment",
-        "Shell",
-        "Bash",
-        "Lua",
-        "Ruby",
-        "Python",
-        "F#",
-        "FSharp",
-        "Perl",
-        "JS",
-        "JavaScript"
-    ],
-    "engines": {
-        "vscode": "^1.16.0"
-    },
-    "contributes": {
-        "snippets": [
-            {
-                "language": "plaintext",
-                "path": "./snippets/shebang-plaintext.json"
-            },
-            {
-                "language": "shellscript",
-                "path": "./snippets/shebang-shellscript.json"
-            },
-            {
-                "language": "perl",
-                "path": "./snippets/shebang-perl.json"
-            },
-            {
-                "language": "php",
-                "path": "./snippets/shebang-php.json"
-            },
-            {
-                "language": "lua",
-                "path": "./snippets/shebang-lua.json"
-            },
-            {
-                "language": "python",
-                "path": "./snippets/shebang-python.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./snippets/shebang-javascript.json"
-            },
-            {
-                "language": "typescript",
-                "path": "./snippets/shebang-javascript.json"
-            },
-            {
-                "language": "fsharp",
-                "path": "./snippets/shebang-fsharp.json"
-            },
-            {
-                "language": "ruby",
-                "path": "./snippets/shebang-ruby.json"
-            },
-            {
-                "language": "groovy",
-                "path": "./snippets/shebang-groovy.json"
-            },
-            {
-                "language": "powershell",
-                "path": "./snippets/shebang-powershell.json"
-            }
-        ]
-    },
-    "scripts": {
-        "package": "vsce package",
-        "deploy:vscode-marketplace": "vsce publish"
-    },
-    "devDependencies": {
-        "@vscode/vsce": "^2.24.0"
-    }
+  "name": "shebang-snippets",
+  "displayName": "Shebang Snippets",
+  "description": "Snippets for shebang lines for different types of scripts.",
+  "version": "1.0.0",
+  "publisher": "rpinski",
+  "author": "Andreas Weizel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rpinski/vscode-shebang-snippets"
+  },
+  "icon": "images/shebang-logo.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Snippet",
+    "Script",
+    "Shebang",
+    "Comment",
+    "Shell",
+    "Bash",
+    "Lua",
+    "Ruby",
+    "Python",
+    "F#",
+    "FSharp",
+    "Perl",
+    "JS",
+    "JavaScript"
+  ],
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": []
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack --mode development",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9"
+  }
 }
