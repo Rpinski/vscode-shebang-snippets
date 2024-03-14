@@ -6,11 +6,10 @@ export function createShebangCompletionItem(
   precedingHash: boolean
 ) {
   if (snippet.type === "Shebang") {
-    const snippetCompletion = new vscode.CompletionItem(
-      snippet.label ?? snippet.executable
-    );
+    const completedShebang = `#!/usr/bin/env ${snippet.executable}`;
+    const snippetCompletion = new vscode.CompletionItem(completedShebang);
     snippetCompletion.insertText = new vscode.SnippetString(
-      `${precedingHash ? "" : "#"}!/usr/bin/env ${snippet.executable}`
+      completedShebang.substring(precedingHash ? 1 : 0)
     );
     snippetCompletion.documentation = snippet.description;
     return snippetCompletion;
@@ -22,9 +21,7 @@ export function createMagicCommentCompletionItem(
   precedingHash: boolean
 ) {
   if (snippet.type === "MagicComment") {
-    const snippetCompletion = new vscode.CompletionItem(
-      snippet.label ?? "Encoding"
-    );
+    const snippetCompletion = new vscode.CompletionItem("-*- coding: ...");
     snippetCompletion.insertText = new vscode.SnippetString(
       (precedingHash ? "" : "#") + " -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
     );

@@ -5,7 +5,6 @@ import {
 } from "./completionItemConverters";
 
 export type BasicSnippet = {
-  label?: string;
   description: string;
   toCompletionItem: (
     snippet: Snippet,

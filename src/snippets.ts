@@ -17,13 +17,11 @@ export const Shebangs = {
   }),
 
   expect: shebang({
-    label: "expect",
     executable: "expect -f",
     description: "Adds a shebang for 'expect' scripts",
   }),
 
   fsharp: shebang({
-    label: "fsharp",
     executable: "fsharpi --exec",
     description: "Shebang for F# interpreter",
   }),
@@ -76,7 +74,6 @@ export const Shebangs = {
 
 export const MagicComments = {
   encoding: magicComment({
-    label: "Encoding",
     description: "Adds magic comment for script encoding",
   }),
 };
