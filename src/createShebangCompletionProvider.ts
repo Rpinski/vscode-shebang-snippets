@@ -28,6 +28,7 @@ function registerShebangCompletionProvider(
               createCompletionItemsFromSnippets(
                 snippets,
                 "Shebang",
+                document,
                 precedingHash
               )
             );
@@ -36,6 +37,7 @@ function registerShebangCompletionProvider(
               createCompletionItemsFromSnippets(
                 snippets,
                 "MagicComment",
+                document,
                 precedingHash
               )
             );
@@ -50,11 +52,16 @@ function registerShebangCompletionProvider(
 function* createCompletionItemsFromSnippets(
   snippets: Snippet[],
   type: Snippet["type"],
+  document: vscode.TextDocument,
   precedingHash: boolean
 ) {
   for (let snippet of snippets) {
     if (snippet.type === type) {
-      const completionItem = snippet.toCompletionItem(snippet, precedingHash);
+      const completionItem = snippet.toCompletionItem(
+        snippet,
+        document,
+        precedingHash
+      );
       if (completionItem) {
         yield completionItem;
       }

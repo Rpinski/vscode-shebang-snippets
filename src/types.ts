@@ -1,3 +1,4 @@
+import * as vscode from "vscode";
 import { CompletionItem } from "vscode";
 import {
   createMagicCommentCompletionItem,
@@ -8,6 +9,7 @@ export type BasicSnippet = {
   description: string;
   toCompletionItem: (
     snippet: Snippet,
+    document: vscode.TextDocument,
     precedingHash: boolean
   ) => CompletionItem | undefined;
 };
@@ -15,6 +17,7 @@ export type BasicSnippet = {
 export type Shebang = BasicSnippet & {
   type: "Shebang";
   executable: string;
+  language?: string;
 };
 
 export function shebang(

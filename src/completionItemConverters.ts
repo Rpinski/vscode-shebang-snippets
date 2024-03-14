@@ -1,8 +1,10 @@
 import * as vscode from "vscode";
-import { MagicComment, Shebang, Snippet } from "./types";
+import { Snippet } from "./types";
+import { SET_DOCUMENT_LANGUAGE_COMMAND } from "./setDocumentLanguageCommand";
 
 export function createShebangCompletionItem(
   snippet: Snippet,
+  document: vscode.TextDocument,
   precedingHash: boolean
 ) {
   if (snippet.type === "Shebang") {
@@ -13,12 +15,20 @@ export function createShebangCompletionItem(
     );
     snippetCompletion.documentation = snippet.description;
     snippetCompletion.kind = vscode.CompletionItemKind.Snippet;
+    if (snippet.language) {
+      snippetCompletion.command = {
+        command: SET_DOCUMENT_LANGUAGE_COMMAND,
+        title: SET_DOCUMENT_LANGUAGE_COMMAND,
+        arguments: [document, snippet.language],
+      };
+    }
     return snippetCompletion;
   }
 }
 
 export function createMagicCommentCompletionItem(
   snippet: Snippet,
+  document: vscode.TextDocument,
   precedingHash: boolean
 ) {
   if (snippet.type === "MagicComment") {
