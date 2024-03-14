@@ -12,6 +12,7 @@ export function createShebangCompletionItem(
       completedShebang.substring(precedingHash ? 1 : 0)
     );
     snippetCompletion.documentation = snippet.description;
+    snippetCompletion.kind = vscode.CompletionItemKind.Snippet;
     return snippetCompletion;
   }
 }
@@ -26,6 +27,7 @@ export function createMagicCommentCompletionItem(
       (precedingHash ? "" : "#") + " -*- coding: ${1|utf-8,latin-1,ascii|} -*-"
     );
     snippetCompletion.documentation = snippet.description;
+    snippetCompletion.kind = vscode.CompletionItemKind.Snippet;
     return snippetCompletion;
   }
 }
