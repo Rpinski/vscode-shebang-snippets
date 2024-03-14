@@ -23,7 +23,11 @@ function registerShebangCompletionProvider(
       ) {
         if (position.character <= 1) {
           const precedingHash = position.character === 1;
-          if (position.line === 0) {
+          if (
+            position.line === 0 &&
+            (!precedingHash ||
+              document.getText(new vscode.Range(0, 0, 0, 1)) === "#")
+          ) {
             return Array.from(
               createCompletionItemsFromSnippets(
                 snippets,
