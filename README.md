@@ -1,43 +1,52 @@
 # Shebang Snippets
 
-[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/rpinski.shebang-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=rpinski.shebang-snippets)
+[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/rpinski.shebang-snippets.svg?label=VS%20Marketplace&color=blue)](https://marketplace.visualstudio.com/items?itemName=rpinski.shebang-snippets) [![Open VSX](https://img.shields.io/open-vsx/v/rpinski/shebang-snippets?label=Open%20VSX&color=blue)](https://open-vsx.org/extension/rpinski/shebang-snippets)
 
 Set of snippets for [Visual Studio Code](https://code.visualstudio.com/) to insert "shebang" lines for various types of scripts and interpreters used on Unix-like systems.
 
 ## Features
 
-After opening a new file you can just type:
+### Shebang Snippets
 
-- `#!` or `shebang` if the file type is detected
-    ![Shebang Snippets in action](https://user-images.githubusercontent.com/1767539/31865808-113720ae-b775-11e7-9267-e9c722ef4ac2.png)
-    Note: For most of the supported languages `#` means the beginning of a comment, so there you always have to press `CTRL` + `SPACE` after `#!` to see the snippet due to VSCode behavior with comments.
-- `#!` and the interpreter name if the file type is **NOT** detected
-    ![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/snippet.gif)
+After opening a new file you can just type `#` or press `CTRL`+`SPACE` at the beginning of the first line to add the full line:
 
-to add the full line. Currently supported shebang snippets:
+![Shebang Snippets in action](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/readme-shebang-snippet.png)
+
+Currently supported shebang snippets:
 
 - Shell:
-  - `#!sh` -> `#!/usr/bin/env sh`
-  - `#!bash` -> `#!/usr/bin/env bash`
-- Expect: `#!expect` -> `#!/usr/bin/expect -f`
-- Perl: `#!perl` -> `#!/usr/bin/env perl`
-- Lua: `#!lua` -> `#!/usr/bin/env lua`
+  - `sh`
+  - `bash`
+  - `zsh`
+- Expect: `expect -f`
+- Perl: `perl`
+- Lua: `lua`
 - Python:
-  - `#!python` -> `#!/usr/bin/env python`
-  - `#!python+encoding` ->
-    - `#!/usr/bin/env python`
-    - `# -*- coding: utf-8 -*-`
-- PHP: `#!php` -> `#!/usr/bin/env php`
-- Node: `#!node` -> `#!/usr/bin/env node`
-- F#: `#!fsharp` -> `#!/usr/bin/env fsharpi --exec`
-- Ruby:
-  - `#!ruby` -> `#!/usr/bin/env ruby`
-  - `#!ruby+encoding` ->
-    - `#!/usr/bin/env ruby`
-    - `# -*- coding: utf-8 -*-`
-- Groovy: `#!groovy` -> `#!/usr/bin/env groovy`
-- PowerShell Core: `#!pwsh` or `#!powershell` -> `#!/usr/bin/env pwsh`
+  - `python`
+  - `python3`
+- PHP: `php`
+- Node: `node`
+- F#: `fsharpi --exec`
+- Ruby: `ruby`
+- Groovy: `groovy`
+- PowerShell Core: `pwsh`
 
-To insert the magic comment for encoding (`# -*- coding: utf-8 -*-`) you can also just type `#encoding`. The snippet offers different encodings for selection.
+### Magic Comments for Encoding
 
-If you have already saved your script with appropriate file extension and need the shebang, you can alternatively just start typing `shebang` to complete the line for your script type.
+For some languages the magic comment for encoding
+
+`# -*- coding: utf-8 -*-`
+
+can be inserted by typing `#` at the beginning of the second line. The snippet offers different encodings for selection.
+
+![Complete magic comment for encoding](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/readme-magic-comment-snippet1.png)
+
+![Encoding selection](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/readme-magic-comment-snippet2.png)
+
+### Automatic Selection of Language Mode
+
+After inserting a shebang snippet the extension automatically switches current editor tab to the appropriate language. For example, if you insert a shebang for the Python interpreter, the editor will switch to "Python" mode.
+
+![Language Mode selection](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/readme-language-mode1.png)
+
+![Language Mode in Status Bar](https://raw.githubusercontent.com/Rpinski/vscode-shebang-snippets/master/images/readme-language-mode2.png)
