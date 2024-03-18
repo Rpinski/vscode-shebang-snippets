@@ -1,5 +1,12 @@
 ## Release Notes
 
+### 1.0.0 (preview)
+
+- Complete rewrite of extension, now being a real editor extension instead of just a collection of snippets
+- Shebang suggestions now only shown at beginning of 1st line and not anywhere in document
+- After completing a shebang line, document language is automatically updated appropritately
+- Support for zsh shebang
+
 ### 0.1.4
 
 Added shebang snippets for PowerShell Core.
