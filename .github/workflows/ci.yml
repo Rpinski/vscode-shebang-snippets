@@ -29,6 +29,9 @@ jobs:
         with:
           node-version: "18"
 
+      - name: Bootstrap Build Tools
+        run: buildtools/bootstrap
+
       - name: Build Extension
         run: buildtools/build-vsix
 
