@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+export DOTNET_NOLOGO=true
 SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
 
 mkdir ./artifacts

@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 
+export DOTNET_NOLOGO=true
 RELEASEVERSION=`dotnet dotnet-gitversion -showvariable MajorMinorPatch`
 git tag v$RELEASEVERSION
