@@ -10,7 +10,8 @@ export type BasicSnippet = {
   toCompletionItem: (
     snippet: Snippet,
     document: vscode.TextDocument,
-    precedingHash: boolean
+    precedingHash: boolean,
+    sortRank?: number
   ) => CompletionItem | undefined;
 };
 

@@ -1,14 +1,18 @@
 import * as vscode from "vscode";
 import { languages } from "./languages";
-import { Snippet } from "./types";
+import { Shebang, Snippet } from "./types";
+import { getLastShebangs } from "./settings";
 
-export function registerShebangCompletionProviders() {
+export function registerShebangCompletionProviders(
+  extensionContext: vscode.ExtensionContext
+) {
   return Object.entries(languages).map(([language, shebangs]) =>
-    registerShebangCompletionProvider(language, shebangs)
+    registerShebangCompletionProvider(extensionContext, language, shebangs)
   );
 }
 
 function registerShebangCompletionProvider(
+  extensionContext: vscode.ExtensionContext,
   language: string,
   snippets: Snippet[]
 ) {
@@ -28,17 +32,26 @@ function registerShebangCompletionProvider(
             (!precedingHash ||
               document.getText(new vscode.Range(0, 0, 0, 1)) === "#")
           ) {
+            const lastShebangs = getLastShebangs(extensionContext);
             return Array.from(
               createCompletionItemsFromSnippets(
+                extensionContext,
                 snippets,
                 "Shebang",
                 document,
-                precedingHash
+                precedingHash,
+                (snippet: Shebang) => {
+                  const lastShebangIndex = lastShebangs.findIndex(
+                    (lastShebang) => lastShebang === snippet.executable
+                  );
+                  return lastShebangIndex > -1 ? lastShebangIndex : 100000;
+                }
               )
             );
           } else if (position.line === 1) {
             return Array.from(
               createCompletionItemsFromSnippets(
+                extensionContext,
                 snippets,
                 "MagicComment",
                 document,
@@ -53,18 +66,21 @@ function registerShebangCompletionProvider(
   );
 }
 
-function* createCompletionItemsFromSnippets(
+function* createCompletionItemsFromSnippets<T extends Snippet>(
+  extensionContext: vscode.ExtensionContext,
   snippets: Snippet[],
-  type: Snippet["type"],
+  type: T["type"],
   document: vscode.TextDocument,
-  precedingHash: boolean
+  precedingHash: boolean,
+  rankCreator?: (snippet: T) => number
 ) {
   for (let snippet of snippets) {
     if (snippet.type === type) {
       const completionItem = snippet.toCompletionItem(
         snippet,
         document,
-        precedingHash
+        precedingHash,
+        rankCreator?.(snippet as T)
       );
       if (completionItem) {
         yield completionItem;
