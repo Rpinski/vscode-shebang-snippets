@@ -69,6 +69,6 @@
     "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.3.9",
-    "@vscode/vsce": "^2.24.0"
+    "@vscode/vsce": "^2.25.0"
   }
 }
