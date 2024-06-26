@@ -2,9 +2,14 @@
 
 export DOTNET_NOLOGO=true
 SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
+PRERELEASETAG=`dotnet dotnet-gitversion -showvariable PreReleaseTag`
+VSIX_FILENAME="artifacts/shebang-snippets-$SEMVER.vsix"
 
 mkdir ./artifacts
 
 npm version --git-tag-version false --allow-same-version true -- $SEMVER
+if [[ -n "$PRERELEASETAG" ]]; then
+   npm pkg set preview='true'
+fi
 npm install
-npm run build:vsix -- -o ./artifacts/shebang-snippets-$SEMVER.vsix
+npm run build:vsix -- -o $VSIX_FILENAME
