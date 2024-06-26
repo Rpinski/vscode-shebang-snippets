@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+export DOTNET_NOLOGO=true
+SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
+VSIX_FILENAME="artifacts/shebang-snippets-$SEMVER.vsix"
+
+npx -y ovsx publish $VSIX_FILENAME
