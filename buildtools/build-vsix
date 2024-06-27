@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 export DOTNET_NOLOGO=true
 SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
