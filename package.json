@@ -39,6 +39,11 @@
   "activationEvents": [
     "onStartupFinished"
   ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
   "main": "./dist/extension.js",
   "contributes": {
     "commands": []
