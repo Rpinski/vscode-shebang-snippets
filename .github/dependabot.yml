@@ -14,7 +14,11 @@ updates:
     ignore:
       - dependency-name: "@types/vscode"
       - dependency-name: "@types/node"
-        versions: [">=21"]
+        versions:
+          - ">=21"
+      - dependency-name: "eslint"
+        versions:
+          - ">=9"
     groups:
       major-minor-dependencies:
         update-types:
