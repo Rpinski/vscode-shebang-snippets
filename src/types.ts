@@ -2,17 +2,24 @@ import * as vscode from "vscode";
 import { CompletionItem } from "vscode";
 import {
   createMagicCommentCompletionItem,
-  createShebangCompletionItem,
+  createShebangCompletionItems,
 } from "./completionItemConverters";
+
+export type SnippetRankCreator = (snippet: Snippet) => number;
+export type ShebangRankCreator = (
+  shebang: Shebang,
+  executablePath: string
+) => number;
+export type RankCreator = SnippetRankCreator | ShebangRankCreator;
 
 export type BasicSnippet = {
   description: string;
-  toCompletionItem: (
+  toCompletionItems: (
     snippet: Snippet,
     document: vscode.TextDocument,
     precedingHash: boolean,
-    sortRank?: number
-  ) => CompletionItem | undefined;
+    rankCreator?: RankCreator
+  ) => CompletionItem[] | undefined;
 };
 
 export type Shebang = BasicSnippet & {
@@ -21,13 +28,11 @@ export type Shebang = BasicSnippet & {
   language?: string;
 };
 
-export function shebang(
-  params: Omit<Shebang, "type" | "toCompletionItem">
-): Shebang {
+export function shebang(params: Omit<Shebang, "type" | "toCompletionItems">): Shebang {
   return {
     ...params,
     type: "Shebang",
-    toCompletionItem: createShebangCompletionItem,
+    toCompletionItems: createShebangCompletionItems,
   };
 }
 
@@ -36,12 +41,12 @@ export type MagicComment = BasicSnippet & {
 };
 
 export function magicComment(
-  params: Omit<MagicComment, "type" | "toCompletionItem">
+  params: Omit<MagicComment, "type" | "toCompletionItems">
 ): MagicComment {
   return {
     ...params,
     type: "MagicComment",
-    toCompletionItem: createMagicCommentCompletionItem,
+    toCompletionItems: createMagicCommentCompletionItem,
   };
 }
 

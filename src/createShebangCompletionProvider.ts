@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { languages } from "./languages";
-import { Shebang, Snippet } from "./types";
+import { RankCreator, Shebang, Snippet } from "./types";
 import { getLastShebangs } from "./settings";
 
 export function registerShebangCompletionProviders(
@@ -40,9 +40,10 @@ function registerShebangCompletionProvider(
                 "Shebang",
                 document,
                 precedingHash,
-                (snippet: Shebang) => {
+                (shebang: Shebang, executablePath: string) => {
                   const lastShebangIndex = lastShebangs.findIndex(
-                    (lastShebang) => lastShebang === snippet.executable
+                    (lastShebang) =>
+                      lastShebang === `${executablePath}${shebang.executable}`
                   );
                   return lastShebangIndex > -1 ? lastShebangIndex : 100000;
                 }
@@ -72,18 +73,18 @@ function* createCompletionItemsFromSnippets<T extends Snippet>(
   type: T["type"],
   document: vscode.TextDocument,
   precedingHash: boolean,
-  rankCreator?: (snippet: T) => number
+  rankCreator?: RankCreator
 ) {
   for (let snippet of snippets) {
     if (snippet.type === type) {
-      const completionItem = snippet.toCompletionItem(
+      const completionItem = snippet.toCompletionItems(
         snippet,
         document,
         precedingHash,
-        rankCreator?.(snippet as T)
+        rankCreator
       );
       if (completionItem) {
-        yield completionItem;
+        yield* completionItem;
       }
     }
   }

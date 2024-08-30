@@ -10,12 +10,16 @@ export function registerHandleSnippetCompletionCommand(
 ) {
   return vscode.commands.registerCommand(
     HANDLE_SNIPPET_COMPLETION_COMMAND,
-    async (document: vscode.TextDocument, snippet: Snippet) => {
+    async (
+      document: vscode.TextDocument,
+      snippet: Snippet,
+      executablePath: string
+    ) => {
       if (snippet.type === "Shebang") {
         if (document.languageId === "plaintext" && snippet.language) {
           vscode.languages.setTextDocumentLanguage(document, snippet.language);
         }
-        setLastShebang(extensionContext, snippet);
+        setLastShebang(extensionContext, snippet, executablePath);
       }
     }
   );

@@ -7,12 +7,14 @@ export function getLastShebangs(extensionContext: vscode.ExtensionContext) {
 
 export function setLastShebang(
   extensionContext: vscode.ExtensionContext,
-  lastShebang: Shebang
+  lastShebang: Shebang,
+  executablePath: string
 ) {
   const oldLastShebangs = getLastShebangs(extensionContext);
+  const newShebang = `${executablePath}${lastShebang.executable}`;
   const newLastShebangs = [
-    lastShebang.executable,
-    ...oldLastShebangs.filter((shebang) => shebang !== lastShebang.executable),
+    newShebang,
+    ...oldLastShebangs.filter((shebang) => shebang !== newShebang),
   ];
   extensionContext.globalState.update("lastShebangs", newLastShebangs);
 }

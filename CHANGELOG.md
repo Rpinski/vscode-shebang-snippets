@@ -6,6 +6,7 @@
 - Shebang suggestions now only shown at beginning of 1st line and not anywhere in document
 - After completing a shebang line, document language is automatically updated appropritately
 - Support for zsh shebang
+- Shebangs with `/usr/bin/...` and `/usr/bin/env ...` are both supported
 
 ### 0.1.4
 
