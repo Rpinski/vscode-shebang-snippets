@@ -7,6 +7,7 @@
 - After completing a shebang line, document language is automatically updated appropritately
 - Support for zsh shebang
 - Shebangs with `/usr/bin/...` and `/usr/bin/env ...` are both supported
+- The extension learns from it's usage, frequently used shebangs are preferred in suggestion list
 
 ### 0.1.4
 
