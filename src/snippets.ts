@@ -19,6 +19,12 @@ export const Shebangs = {
     language: "shellscript",
   }),
 
+  nu: shebang({
+    executable: "nu",
+    description: "Adds a shebang for 'nu' shell scripts",
+    language: "shellscript",
+  }),
+
   expect: shebang({
     executable: "expect -f",
     description: "Adds a shebang for 'expect' scripts",

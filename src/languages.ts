@@ -3,7 +3,7 @@ import { SnippetLanguages } from "./types";
 
 export const languages: SnippetLanguages = {
   plaintext: Object.values(Shebangs),
-  shellscript: [Shebangs.sh, Shebangs.bash, Shebangs.zsh],
+  shellscript: [Shebangs.sh, Shebangs.bash, Shebangs.zsh, Shebangs.nu],
   fsharp: [Shebangs.fsharp],
   groovy: [Shebangs.groovy],
   javascript: [Shebangs.node],
