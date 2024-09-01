@@ -18,6 +18,7 @@ Currently supported shebang snippets:
   - `sh`
   - `bash`
   - `zsh`
+  - `nu`
 - Expect: `expect -f`
 - Perl: `perl`
 - Lua: `lua`
