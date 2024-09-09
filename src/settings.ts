@@ -18,3 +18,18 @@ export function setLastShebang(
   ];
   extensionContext.globalState.update("lastShebangs", newLastShebangs);
 }
+
+export function getLastExecutedVersion(
+  extensionContext: vscode.ExtensionContext
+) {
+  return extensionContext.globalState.get<string>("lastExecutedVersion");
+}
+
+export function setLastExecutedVersion(
+  extensionContext: vscode.ExtensionContext
+) {
+  extensionContext.globalState.update(
+    "lastExecutedVersion",
+    extensionContext.extension.packageJSON.version ?? ""
+  );
+}
