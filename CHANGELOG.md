@@ -1,13 +1,13 @@
 ## Release Notes
 
-### 1.0.0 (preview)
+### 1.0.0
 
 - Complete rewrite of extension, now being a real editor extension instead of just a collection of snippets
 - Shebang suggestions now only shown at beginning of 1st line and not anywhere in document
 - After completing a shebang line, document language is automatically updated appropritately
 - Support for zsh and Nushell shebangs
 - Shebangs with `/usr/bin/...` and `/usr/bin/env ...` are both supported
-- The extension learns from it's usage, frequently used shebangs are preferred in suggestion list
+- The extension learns from its usage, frequently used shebangs are preferred in suggestion list
 
 ### 0.1.4
 
