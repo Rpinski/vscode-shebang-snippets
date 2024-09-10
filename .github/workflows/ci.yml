@@ -50,6 +50,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+      - name: Publish to VSCode Marketplace
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: bash
+        run: |
+          buildtools/publish-vsix
+        env:
+          VSCE_PAT: ${{secrets.VSCODE_TOKEN}}
+
       - name: Publish to OpenVSIX
         if: startsWith(github.ref, 'refs/tags/v')
         shell: bash
