@@ -18,7 +18,7 @@ export function createShebangCompletionItems(
         rankCreator
       ),
       createShebangSnippetCompletion(
-        "/usr/bin/env ",
+        snippet.executable.includes(" ") ? "/usr/bin/env -S " : "/usr/bin/env ",
         snippet,
         document,
         precedingHash,
