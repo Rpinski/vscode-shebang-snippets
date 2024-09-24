@@ -1,5 +1,10 @@
 ## Release Notes
 
+### 1.1.0
+
+- For better OS compatibility, use `/usr/bin/env -S` if shebang passes additional parameters to the interpreter
+- Update F# shebang to use the modern `dotnet fsi` command
+
 ### 1.0.0
 
 - Complete rewrite of extension, now being a real editor extension instead of just a collection of snippets

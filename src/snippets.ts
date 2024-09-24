@@ -32,7 +32,7 @@ export const Shebangs = {
   }),
 
   fsharp: shebang({
-    executable: "fsharpi --exec",
+    executable: "dotnet fsi",
     description: "Shebang for F# interpreter",
     language: "fsharp",
   }),
