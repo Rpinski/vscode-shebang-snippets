@@ -27,7 +27,7 @@ Currently supported shebang snippets:
   - `python3`
 - PHP: `php`
 - Node: `node`
-- F#: `fsharpi --exec`
+- F#: `dotnet fsi`
 - Ruby: `ruby`
 - Groovy: `groovy`
 - PowerShell Core: `pwsh`
