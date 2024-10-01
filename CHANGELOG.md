@@ -1,6 +1,6 @@
 ## Release Notes
 
-### 1.1.0
+### 1.0.1
 
 - For better OS compatibility, use `/usr/bin/env -S` if shebang passes additional parameters to the interpreter
 - Update F# shebang to use the modern `dotnet fsi` command
