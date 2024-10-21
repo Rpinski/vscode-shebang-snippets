@@ -90,6 +90,12 @@ export const Shebangs = {
     description: "Adds a shebang for Ruby scripts",
     language: "ruby",
   }),
+
+  tsnode: shebang({
+    executable: "ts-node",
+    description: "Adds a shebang for TypeScript executed with ts-node",
+    language: "typescript",
+  }),
 };
 
 export const MagicComments = {
