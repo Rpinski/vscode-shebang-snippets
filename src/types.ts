@@ -52,4 +52,4 @@ export function magicComment(
 
 export type Snippet = Shebang | MagicComment;
 
-export type SnippetLanguages = { [language: string]: Snippet[] };
+export type SnippetLanguages = Record<string, Snippet[]>;
