@@ -96,6 +96,12 @@ export const Shebangs = {
     description: "Adds a shebang for TypeScript executed with ts-node",
     language: "typescript",
   }),
+
+  tsx: shebang({
+    executable: "npx tsx",
+    description: "Adds a shebang for TypeScript executed with tsx",
+    language: "typescript",
+  }),
 };
 
 export const MagicComments = {

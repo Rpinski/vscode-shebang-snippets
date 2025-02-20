@@ -13,5 +13,5 @@ export const languages: SnippetLanguages = {
   powershell: [Shebangs.pwsh],
   python: [Shebangs.python, Shebangs.python3, MagicComments.encoding],
   ruby: [Shebangs.ruby, MagicComments.encoding],
-  typescript: [Shebangs.tsnode],
+  typescript: [Shebangs.tsx, Shebangs.tsnode],
 };
