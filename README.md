@@ -31,6 +31,9 @@ Currently supported shebang snippets:
 - Ruby: `ruby`
 - Groovy: `groovy`
 - PowerShell Core: `pwsh`
+- TypeScript:
+  - `tsx`
+  - `ts-node`
 
 ### Magic Comments for Encoding
 

@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 1.1
+
+- Added shebang snippets for TypeScript files
+
 ### 1.0.1
 
 - For better OS compatibility, use `/usr/bin/env -S` if shebang passes additional parameters to the interpreter
