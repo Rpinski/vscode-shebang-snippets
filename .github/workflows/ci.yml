@@ -25,9 +25,15 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
       - uses: actions/setup-node@v5
         with:
-          node-version: "18"
+          node-version: "20"
+          cache: 'pnpm'
 
       - name: Bootstrap Build Tools
         run: buildtools/bootstrap
