@@ -11,5 +11,5 @@ npm version --git-tag-version false --allow-same-version true -- $SEMVER
 if [[ -n "$PRERELEASETAG" ]]; then
    npm pkg set preview='true'
 fi
-npm install
-npm run build:vsix -- -o $VSIX_FILENAME
+pnpm install
+pnpm build:vsix -- -o $VSIX_FILENAME
