@@ -11,6 +11,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 3
     ignore:
       - dependency-name: "@types/vscode"
       - dependency-name: "@types/node"
