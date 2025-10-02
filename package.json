@@ -49,15 +49,16 @@
     "commands": []
   },
   "scripts": {
-    "vscode:prepublish": "npm run package",
+    "vscode:prepublish": "pnpm package",
     "compile": "webpack --mode development",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
-    "build:vsix": "vsce package",
-    "deploy:vscode-marketplace": "vsce publish",
+    "build:vsix": "vsce package --no-dependencies",
+    "publish:vscode": "vsce publish --no-dependencies",
+    "publish:openvsx": "ovsx publish --no-dependencies",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "pretest": "pnpm compile-tests && pnpm compile && pnpm lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test"
   },
@@ -70,10 +71,12 @@
     "@vscode/test-cli": "0.0.11",
     "@vscode/test-electron": "2.5.2",
     "@vscode/vsce": "3.6.0",
+    "ovsx": "0.10.5",
     "eslint": "9.36.0",
     "ts-loader": "9.5.4",
     "typescript": "5.9.2",
     "webpack": "5.101.3",
     "webpack-cli": "6.0.1"
-  }
+  },
+  "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef"
 }
