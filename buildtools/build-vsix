@@ -12,4 +12,4 @@ if [[ -n "$PRERELEASETAG" ]]; then
    npm pkg set preview='true'
 fi
 pnpm install
-pnpm build:vsix -- -o $VSIX_FILENAME
+pnpm run build:vsix -o $VSIX_FILENAME

@@ -4,4 +4,4 @@ export DOTNET_NOLOGO=true
 SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
 VSIX_FILENAME="artifacts/shebang-snippets-$SEMVER.vsix"
 
-pnpm publish:vscode --no-git-tag-version -i $VSIX_FILENAME
+pnpm run publish:vscode --no-git-tag-version -i $VSIX_FILENAME

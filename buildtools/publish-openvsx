@@ -4,4 +4,4 @@ export DOTNET_NOLOGO=true
 SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
 VSIX_FILENAME="artifacts/shebang-snippets-$SEMVER.vsix"
 
-pnpm publish:openvsx $VSIX_FILENAME
+pnpm run publish:openvsx $VSIX_FILENAME
