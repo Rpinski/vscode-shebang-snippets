@@ -1,7 +1,9 @@
 import { MagicComments, Shebangs } from "./snippets";
-import { SnippetLanguages } from "./types";
+import { shebang, SnippetLanguages } from "./types";
 
-export const languages: SnippetLanguages = {
+export const getSnippetsByLanguage = () => builtInSnippets;
+
+const builtInSnippets: SnippetLanguages = {
   plaintext: Object.values(Shebangs),
   shellscript: [Shebangs.sh, Shebangs.bash, Shebangs.zsh, Shebangs.nu],
   fsharp: [Shebangs.fsharp],

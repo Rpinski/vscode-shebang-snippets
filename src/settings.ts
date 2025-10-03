@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
-import { Shebang } from "./types";
+import { CustomShebangExecutionPaths, Shebang } from "./types";
+import { getShebangKey } from "./utils";
 
 export function getLastShebangs(extensionContext: vscode.ExtensionContext) {
   return extensionContext.globalState.get<string[]>("lastShebangs") ?? [];
@@ -32,4 +33,40 @@ export function setLastExecutedVersion(
     "lastExecutedVersion",
     extensionContext.extension.packageJSON.version ?? ""
   );
+}
+
+export function getCustomShebangExecPaths() {
+  return (
+    vscode.workspace
+      .getConfiguration("shebang-snippets")
+      .get<CustomShebangExecutionPaths>("customShebangExecPaths") ?? {}
+  );
+}
+
+export function getCustomShebangExecPathsForShebang(shebang: Shebang) {
+  const shebangKey = getShebangKey(shebang);
+  if (!shebangKey) {
+    return [];
+  }
+  return getCustomShebangExecPaths()[shebangKey] ?? [];
+}
+
+export function saveCustomShebangExecPath(shebang: Shebang, customExecPath: string) {
+  const shebangKey = getShebangKey(shebang);
+  if (!shebangKey) {
+    return;
+  }
+
+  const currentSetting = getCustomShebangExecPaths();
+  const customPaths = currentSetting[shebangKey] ?? [];
+  if (!customPaths.includes(customExecPath)) {
+    customPaths.push(customExecPath);
+  }
+  vscode.workspace
+    .getConfiguration("shebang-snippets")
+    .update(
+      "customShebangExecPaths",
+      { ...currentSetting, [shebangKey]: customPaths },
+      vscode.ConfigurationTarget.Global
+    );
 }

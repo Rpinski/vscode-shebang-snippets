@@ -46,7 +46,23 @@
   },
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": []
+    "configuration": {
+      "title": "Shebang Snippets Extension",
+      "type": "object",
+      "properties": {
+        "shebang-snippets.customShebangExecPaths": {
+          "type": "object",
+          "default": {},
+          "description": "Allows to define sets of custom executable paths to be suggested in snippets for different shebang types.",
+          "additionalProperties": {
+            "type": "array",
+              "items": {
+                "type": "string"
+              }
+          }
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm package",

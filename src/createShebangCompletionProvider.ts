@@ -1,12 +1,12 @@
 import * as vscode from "vscode";
-import { languages } from "./languages";
 import { RankCreator, Shebang, Snippet } from "./types";
 import { getLastShebangs } from "./settings";
+import { getSnippetsByLanguage } from "./languages";
 
 export function registerShebangCompletionProviders(
   extensionContext: vscode.ExtensionContext
 ) {
-  return Object.entries(languages).map(([language, shebangs]) =>
+  return Object.entries(getSnippetsByLanguage()).map(([language, shebangs]) =>
     registerShebangCompletionProvider(extensionContext, language, shebangs)
   );
 }

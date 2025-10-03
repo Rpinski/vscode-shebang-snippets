@@ -1,6 +1,8 @@
 import * as vscode from "vscode";
 import { MagicComment, RankCreator, Shebang, Snippet } from "./types";
 import { HANDLE_SNIPPET_COMPLETION_COMMAND } from "./handleSnippetCompletionCommand";
+import { getCustomShebangExecPathsForShebang } from "./settings";
+import { Shebangs } from "./snippets";
 
 export function createShebangCompletionItems(
   snippet: Snippet,
@@ -23,6 +25,15 @@ export function createShebangCompletionItems(
         document,
         precedingHash,
         rankCreator
+      ),
+      ...getCustomShebangExecPathsForShebang(snippet).map((execPath) =>
+        createShebangSnippetCompletion(
+          execPath,
+          snippet,
+          document,
+          precedingHash,
+          rankCreator
+        )
       ),
     ];
   }
