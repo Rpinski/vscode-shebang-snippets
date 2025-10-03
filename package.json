@@ -46,7 +46,104 @@
   },
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": []
+    "configuration": {
+      "title": "Shebang Snippets Extension",
+      "type": "object",
+      "properties": {
+        "shebang-snippets.customShebangExecPaths": {
+          "type": "object",
+          "default": {},
+          "description": "Allows to define sets of custom executable paths to be suggested in shebang snippets for different languages.",
+          "properties": {
+            "plaintext": {
+              "description": "Custom executable paths for plain text files",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "shellscript": {
+              "description": "Custom executable paths for shell scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "fsharp": {
+              "description": "Custom executable paths for F# files",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "groovy": {
+              "description": "Custom executable paths for Groovy scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "javascript": {
+              "description": "Custom executable paths for JavaScript files",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "lua": {
+              "description": "Custom executable paths for Lua scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "perl": {
+              "description": "Custom executable paths for Perl scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "php": {
+              "description": "Custom executable paths for PHP scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "powershell": {
+              "description": "Custom executable paths for PowerShell scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "python": {
+              "description": "Custom executable paths for Python scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ruby": {
+              "description": "Custom executable paths for Ruby scripts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "typescript": {
+              "description": "Custom executable paths for TypeScript files",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm package",

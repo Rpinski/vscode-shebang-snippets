@@ -12,6 +12,8 @@ export type ShebangRankCreator = (
 ) => number;
 export type RankCreator = SnippetRankCreator | ShebangRankCreator;
 
+export type CustomShebangExecutionPaths = Record<string, string[]>;
+
 export type BasicSnippet = {
   description: string;
   toCompletionItems: (
@@ -28,7 +30,19 @@ export type Shebang = BasicSnippet & {
   language?: string;
 };
 
-export function shebang(params: Omit<Shebang, "type" | "toCompletionItems">): Shebang {
+export function shebang(
+  params: Omit<Shebang, "type" | "toCompletionItems">
+): Shebang {
+  return {
+    ...params,
+    type: "Shebang",
+    toCompletionItems: createShebangCompletionItems,
+  };
+}
+
+export function customShebang(
+  params: Omit<Shebang, "type" | "toCompletionItems">
+): Shebang {
   return {
     ...params,
     type: "Shebang",
