@@ -14,6 +14,15 @@ commits_since_tag() {
     echo "$commits"
 }
 
+current_branch() {
+    branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+    if [ $? -eq 0 ]; then
+        echo $branch
+    else
+        echo ""
+    fi
+}
+
 current_branch_pretag() {
     branch=$(git symbolic-ref --short HEAD 2>/dev/null)
     if [ $? -eq 0 ]; then
@@ -90,19 +99,40 @@ head_sha=$(git rev-parse HEAD)
 
 package_version=""
 assembly_version=""
+version_type=""
+next_package_version=""
 
 commits=$(( $(commits_since_tag "$latest_tag") ))
 
+next_major=$major
+next_minor=$minor
+next_patch=$patch
+
+branch=$(current_branch)
+if [[ "$branch" == "master" || "$branch" == "main" ]]; then
+    next_minor=$((minor + 1))
+else
+    next_patch=$((patch + 1))
+fi
+
 if [ $commits -eq 0 ]; then
     package_version="${major}.${minor}.${patch}"
+    next_package_version="${next_major}.${next_minor}.${next_patch}"
     assembly_version="${major}.${minor}.${patch}.0"
+    version_type="release"
 else
-    package_version="${major}.${minor}.${patch}-${pretag}.${commits}"
-    assembly_version="${major}.${minor}.${patch}.${commits}"
+    package_version="${next_major}.${next_minor}.${next_patch}-${pretag}.${commits}"
+    next_package_version="${next_major}.${next_minor}.${next_patch}"
+    assembly_version="${next_major}.${next_minor}.${next_patch}.${commits}"
+    version_type="preview"
 fi
 
 if [[ "$1" == "assembly" ]]; then
     echo $assembly_version
+elif [[ "$1" == "type" ]]; then
+    echo $version_type
+elif [[ "$1" == "next" ]]; then
+    echo $next_package_version
 else
     echo $package_version
 fi

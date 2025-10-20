@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 export DOTNET_NOLOGO=true
-SEMVER=`dotnet dotnet-gitversion -showvariable SemVer`
-PRERELEASETAG=`dotnet dotnet-gitversion -showvariable PreReleaseTag`
+SEMVER=`buildtools/versionize`
+VERSIONTYPE=`buildtools/versionize type`
 VSIX_FILENAME="artifacts/shebang-snippets-$SEMVER.vsix"
 
 mkdir ./artifacts
 
 npm version --git-tag-version false --allow-same-version true -- $SEMVER
-if [[ -n "$PRERELEASETAG" ]]; then
+if [[ "$VERSIONTYPE" == "preview" ]]; then
    npm pkg set preview='true'
 fi
 pnpm install
