@@ -20,11 +20,6 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 8.0.x
-
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
