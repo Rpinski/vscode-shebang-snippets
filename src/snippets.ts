@@ -85,6 +85,12 @@ export const Shebangs = {
     language: "python",
   }),
 
+  uv: shebang({
+    executable: "uv run --script",
+    description: "Adds a shebang for running Python scripts with inline script metadata",
+    language: "python",
+  }),
+
   ruby: shebang({
     executable: "ruby",
     description: "Adds a shebang for Ruby scripts",
