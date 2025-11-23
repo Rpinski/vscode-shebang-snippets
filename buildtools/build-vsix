@@ -11,5 +11,5 @@ npm version --git-tag-version false --allow-same-version true -- $SEMVER
 if [[ -n "$PRERELEASETAG" ]]; then
    npm pkg set preview='true'
 fi
-pnpm install
+pnpm install --frozen-lockfile
 pnpm run build:vsix -o $VSIX_FILENAME
