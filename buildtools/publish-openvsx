@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-export DOTNET_NOLOGO=true
 SEMVER=`buildtools/versionize`
 VSIX_FILENAME="artifacts/shebang-snippets-$SEMVER.vsix"
 

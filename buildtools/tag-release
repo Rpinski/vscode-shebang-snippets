@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 
-export DOTNET_NOLOGO=true
 RELEASEVERSION=`buildtools/versionize next`
 git tag v$RELEASEVERSION

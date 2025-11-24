@@ -118,7 +118,7 @@ fi
 if [ $commits -eq 0 ]; then
     package_version="${major}.${minor}.${patch}"
     next_package_version="${next_major}.${next_minor}.${next_patch}"
-    assembly_version="${major}.${minor}.${patch}.0"
+    assembly_version="${major}.${minor}.${patch}.10000"
     version_type="release"
 else
     package_version="${next_major}.${next_minor}.${next_patch}-${pretag}.${commits}"
