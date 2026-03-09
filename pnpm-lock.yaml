@@ -14,9 +14,14 @@ overrides:
   lodash@4.17.21: 4.17.23
   '@isaacs/brace-expansion@5.0.0': 5.0.1
   minimatch@3.1.2: 3.1.4
-  minimatch@9.0.5: 9.0.6
+  minimatch@9.0.5: 9.0.7
+  minimatch@10.1.1: 10.2.3
+  ajv@6.12.6: 6.14.0
   ajv@8.17.1: 8.18.0
   chokidar@4.0.3: 5.0.0
+  serialize-javascript@7.0.2: 7.0.3
+  underscore@1.13.7: 1.13.8
+  markdown-it@14.1.0: 14.1.1
 
 importers:
 
@@ -198,14 +203,6 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
-
-  '@isaacs/balanced-match@4.0.1':
-    resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
-    engines: {node: 20 || >=22}
-
-  '@isaacs/brace-expansion@5.0.1':
-    resolution: {integrity: sha512-WMz71T1JS624nWj2n2fnYAuPovhv7EUhk69R6i9dsVyzxt5eM3bjwvgk9L+APE1TRscGysAVMANkB0jh0LQZrQ==}
-    engines: {node: 20 || >=22}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -677,8 +674,8 @@ packages:
     peerDependencies:
       ajv: 8.18.0
 
-  ajv@6.12.6:
-    resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
+  ajv@6.14.0:
+    resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
   ajv@8.18.0:
     resolution: {integrity: sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==}
@@ -1621,8 +1618,8 @@ packages:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
     engines: {node: '>=10'}
 
-  markdown-it@14.1.0:
-    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
+  markdown-it@14.1.1:
+    resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
     hasBin: true
 
   math-intrinsics@1.1.0:
@@ -1664,15 +1661,15 @@ packages:
     resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
     engines: {node: '>=10'}
 
-  minimatch@10.1.1:
-    resolution: {integrity: sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==}
-    engines: {node: 20 || >=22}
+  minimatch@10.2.3:
+    resolution: {integrity: sha512-Rwi3pnapEqirPSbWbrZaa6N3nmqq4Xer/2XooiOKyV3q12ML06f7MOuc5DVH8ONZIFhwIYQ3yzPH4nt7iWHaTg==}
+    engines: {node: 18 || 20 || >=22}
 
   minimatch@3.1.4:
     resolution: {integrity: sha512-twmL+S8+7yIsE9wsqgzU3E8/LumN3M3QELrBZ20OdmQ9jB2JvW5oZtBEmft84k/Gs5CG9mqtWc6Y9vW+JEzGxw==}
 
-  minimatch@9.0.6:
-    resolution: {integrity: sha512-kQAVowdR33euIqeA0+VZTDqU+qo1IeVY+hrKYtZMio3Pg0P0vuh/kwRylLUddJhB6pf3q/botcOvRtx4IN1wqQ==}
+  minimatch@9.0.7:
+    resolution: {integrity: sha512-MOwgjc8tfrpn5QQEvjijjmDVtMw2oL88ugTevzxQnzRLm6l3fVEF2gzU0kYeYYKD8C66+IdGX6peJ4MyUlUnPg==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   minimist@1.2.8:
@@ -2243,8 +2240,8 @@ packages:
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
-  underscore@1.13.7:
-    resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
+  underscore@1.13.8:
+    resolution: {integrity: sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==}
 
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
@@ -2555,7 +2552,7 @@ snapshots:
 
   '@eslint/eslintrc@3.3.1':
     dependencies:
-      ajv: 6.12.6
+      ajv: 6.14.0
       debug: 4.4.3(supports-color@8.1.1)
       espree: 10.4.0
       globals: 14.0.0
@@ -2586,12 +2583,6 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
-
-  '@isaacs/balanced-match@4.0.1': {}
-
-  '@isaacs/brace-expansion@5.0.1':
-    dependencies:
-      '@isaacs/balanced-match': 4.0.1
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2914,7 +2905,7 @@ snapshots:
       debug: 4.4.3(supports-color@8.1.1)
       fast-glob: 3.3.3
       is-glob: 4.0.3
-      minimatch: 9.0.6
+      minimatch: 9.0.7
       semver: 7.7.3
       ts-api-utils: 2.1.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -2952,7 +2943,7 @@ snapshots:
       chokidar: 3.6.0
       enhanced-resolve: 5.18.3
       glob: 10.5.0
-      minimatch: 9.0.6
+      minimatch: 9.0.7
       mocha: 11.7.5
       supports-color: 10.2.2
       yargs: 17.7.2
@@ -3026,7 +3017,7 @@ snapshots:
       hosted-git-info: 4.1.0
       jsonc-parser: 3.3.1
       leven: 3.1.0
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
       mime: 1.6.0
       minimatch: 3.1.4
       parse-semver: 1.1.1
@@ -3162,7 +3153,7 @@ snapshots:
       ajv: 8.18.0
       fast-deep-equal: 3.1.3
 
-  ajv@6.12.6:
+  ajv@6.14.0:
     dependencies:
       fast-deep-equal: 3.1.3
       fast-json-stable-stringify: 2.1.0
@@ -3583,7 +3574,7 @@ snapshots:
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.3
       '@types/estree': 1.0.8
-      ajv: 6.12.6
+      ajv: 6.14.0
       chalk: 4.1.2
       cross-spawn: 7.0.6
       debug: 4.4.3(supports-color@8.1.1)
@@ -3756,7 +3747,7 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 3.4.3
-      minimatch: 9.0.6
+      minimatch: 9.0.7
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 1.11.1
@@ -3765,7 +3756,7 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.1.1
-      minimatch: 10.1.1
+      minimatch: 10.2.3
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.1
@@ -4109,7 +4100,7 @@ snapshots:
     dependencies:
       semver: 7.7.3
 
-  markdown-it@14.1.0:
+  markdown-it@14.1.1:
     dependencies:
       argparse: 2.0.1
       entities: 4.5.0
@@ -4144,15 +4135,15 @@ snapshots:
   mimic-response@3.1.0:
     optional: true
 
-  minimatch@10.1.1:
+  minimatch@10.2.3:
     dependencies:
-      '@isaacs/brace-expansion': 5.0.1
+      brace-expansion: 5.0.4
 
   minimatch@3.1.4:
     dependencies:
       brace-expansion: 1.1.12
 
-  minimatch@9.0.6:
+  minimatch@9.0.7:
     dependencies:
       brace-expansion: 5.0.4
 
@@ -4177,7 +4168,7 @@ snapshots:
       is-path-inside: 3.0.3
       js-yaml: 4.1.1
       log-symbols: 4.1.0
-      minimatch: 9.0.6
+      minimatch: 9.0.7
       ms: 2.1.3
       picocolors: 1.1.1
       serialize-javascript: 6.0.2
@@ -4730,7 +4721,7 @@ snapshots:
     dependencies:
       '@istanbuljs/schema': 0.1.3
       glob: 10.5.0
-      minimatch: 9.0.6
+      minimatch: 9.0.7
 
   text-table@0.2.0: {}
 
@@ -4777,13 +4768,13 @@ snapshots:
     dependencies:
       qs: 6.14.2
       tunnel: 0.0.6
-      underscore: 1.13.7
+      underscore: 1.13.8
 
   typescript@5.9.3: {}
 
   uc.micro@2.1.0: {}
 
-  underscore@1.13.7: {}
+  underscore@1.13.8: {}
 
   undici-types@6.21.0: {}
 
