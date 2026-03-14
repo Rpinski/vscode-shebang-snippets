@@ -4,6 +4,7 @@ import { SnippetLanguages } from "./types";
 export const languages: SnippetLanguages = {
   plaintext: Object.values(Shebangs),
   shellscript: [Shebangs.sh, Shebangs.bash, Shebangs.zsh, Shebangs.nu],
+  csharp: [Shebangs.dotnet],
   fsharp: [Shebangs.fsharp],
   groovy: [Shebangs.groovy],
   javascript: [Shebangs.node],
@@ -11,7 +12,12 @@ export const languages: SnippetLanguages = {
   perl: [Shebangs.perl],
   php: [Shebangs.php],
   powershell: [Shebangs.pwsh],
-  python: [Shebangs.python, Shebangs.python3, Shebangs.uv, MagicComments.encoding],
+  python: [
+    Shebangs.python,
+    Shebangs.python3,
+    Shebangs.uv,
+    MagicComments.encoding,
+  ],
   ruby: [Shebangs.ruby, MagicComments.encoding],
   typescript: [Shebangs.tsx, Shebangs.tsnode],
 };

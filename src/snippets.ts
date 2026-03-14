@@ -31,6 +31,12 @@ export const Shebangs = {
     language: "shellscript",
   }),
 
+  dotnet: shebang({
+    executable: "dotnet run",
+    description: "Adds a shebang for dotnet CLI C# runner",
+    language: "csharp",
+  }),
+
   fsharp: shebang({
     executable: "dotnet fsi",
     description: "Shebang for F# interpreter",
@@ -87,7 +93,8 @@ export const Shebangs = {
 
   uv: shebang({
     executable: "uv run --script",
-    description: "Adds a shebang for running Python scripts with inline script metadata",
+    description:
+      "Adds a shebang for running Python scripts with inline script metadata",
     language: "python",
   }),
 
