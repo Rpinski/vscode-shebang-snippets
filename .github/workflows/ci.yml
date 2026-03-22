@@ -20,7 +20,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Unicode check
+      - name: Full Unicode check
+        if: github.ref == 'refs/heads/master'
+        run: buildtools/unicode-check --all
+      
+      - name: PR-based Unicode check
+        if: github.event_name == 'pull_request' || startsWith(github.ref, 'refs/pull/')
         run: buildtools/unicode-check
 
       - name: Install pnpm
