@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# buildtool: versionize v1
 
 get_latest_tag() {
     git describe --tags --abbrev=0 --match 'v*' | sort -V | tail -n1
