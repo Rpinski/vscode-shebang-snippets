@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# buildtool: unicode-check v1
+# buildtool: unicode-check v1.0.0
 
 set -euo pipefail
 PARAMS="${1:-}"
@@ -31,9 +31,7 @@ COUNT=0
 
 for file in $FILES; do
   if [[ -f "$file" ]]; then
-    if grep -l $'^\xEF\xBB\xBF' "$file"; then
-      echo "⚠️  Unneeded BOM found in $file"
-    elif grep -nP "$PATTERN" "$file"; then
+    if grep -nP "$PATTERN" "$file"; then
       echo "❌ Suspicious Unicode found in $file"
       FAIL=1
     fi
