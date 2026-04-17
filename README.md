@@ -1,6 +1,8 @@
 # Shebang Snippets
 
-[![Visual Studio Marketplace](https://img.shields.io/vscode-marketplace/v/rpinski.shebang-snippets.svg?label=VS%20Marketplace&color=blue)](https://marketplace.visualstudio.com/items?itemName=rpinski.shebang-snippets) [![Open VSX](https://img.shields.io/open-vsx/v/rpinski/shebang-snippets?label=Open%20VSX&color=blue)](https://open-vsx.org/extension/rpinski/shebang-snippets)
+[![Release](https://img.shields.io/github/v/release/Rpinski/vscode-shebang-snippets?include_prereleases&display_name=release)](https://github.com/Rpinski/vscode-shebang-snippets/releases)
+[![Visual Studio Marketplace](https://img.shields.io/badge/VS%20Marketplace-shebang--snippets-blue.svg)](https://marketplace.visualstudio.com/items?itemName=rpinski.shebang-snippets)
+[![Open VSX](https://img.shields.io/open-vsx/v/rpinski/shebang-snippets?label=Open%20VSX&color=blue)](https://open-vsx.org/extension/rpinski/shebang-snippets)
 
 Set of snippets for [Visual Studio Code](https://code.visualstudio.com/) to insert "shebang" lines for various types of scripts and interpreters used on Unix-like systems.
 
