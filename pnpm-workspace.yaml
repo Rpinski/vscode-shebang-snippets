@@ -11,6 +11,7 @@ overrides:
   picomatch@<2.3.2: '2.3.2'
   serialize-javascript@<7.0.5: '7.0.5'
   uuid@<14.0.0: '14.0.0'
+  undici-types@6.21.0: 6.23.0
 trustPolicy: no-downgrade
 trustPolicyExclude:
   - "semver@5.7.2"
