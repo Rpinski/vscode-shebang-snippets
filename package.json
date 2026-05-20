@@ -73,8 +73,8 @@
     "@vscode/vsce": "3.9.1",
     "eslint": "10.4.0",
     "mocha": "11.7.5",
-    "ovsx": "0.10.9",
-    "ts-loader": "9.5.4",
+    "ovsx": "0.10.12",
+    "ts-loader": "9.5.7",
     "typescript": "6.0.3",
     "webpack": "5.106.2",
     "webpack-cli": "7.0.2"
