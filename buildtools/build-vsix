@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 SEMVER=`buildtools/versionize`
-VERSIONTYPE=`buildtools/versionize type`
+VERSIONTYPE=`buildtools/versionize --type`
 VSIX_FILENAME="artifacts/shebang-snippets-$SEMVER.vsix"
+
+echo "Build version $SEMVER ($VERSIONTYPE)"
 
 mkdir ./artifacts
 
-npm version --git-tag-version false --allow-same-version true -- $SEMVER
+pnpm version $SEMVER --no-git-tag-version --allow-same-version --no-git-checks
 if [[ "$VERSIONTYPE" == "preview" ]]; then
    npm pkg set preview='true'
 fi
-pnpm install --frozen-lockfile
+pnpm ci
 pnpm run build:vsix -o $VSIX_FILENAME
