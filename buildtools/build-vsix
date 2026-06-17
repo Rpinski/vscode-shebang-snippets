@@ -10,7 +10,7 @@ mkdir ./artifacts
 
 pnpm version $SEMVER --no-git-tag-version --allow-same-version --no-git-checks
 if [[ "$VERSIONTYPE" == "preview" ]]; then
-   npm pkg set preview='true'
+   pnpm pkg set preview='true'
 fi
 pnpm ci
 pnpm run build:vsix -o $VSIX_FILENAME
