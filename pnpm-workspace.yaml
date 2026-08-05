@@ -7,6 +7,7 @@ minimumReleaseAge: 7200
 minimumReleaseAgeIgnoreMissingTime: false
 blockExoticSubdeps: true
 resolutionMode: time-based
+verifyDepsBeforeRun: warn
 
 overrides:
   brace-expansion@<1.1.13: '1.1.13'
