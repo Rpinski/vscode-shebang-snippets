@@ -2,7 +2,6 @@ allowBuilds:
   '@vscode/vsce-sign': false
   keytar: false
 
-ignoreDepScripts: true
 minimumReleaseAge: 7200
 minimumReleaseAgeIgnoreMissingTime: false
 blockExoticSubdeps: true
