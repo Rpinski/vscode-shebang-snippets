@@ -18,8 +18,7 @@ updates:
     ignore:
       - dependency-name: "@types/vscode"
       - dependency-name: "@types/node"
-        versions:
-          - ">=23"
+        versions: [ ">24" ]
     groups:
       major-minor-dependencies:
         update-types:
