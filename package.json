@@ -59,16 +59,16 @@
     "@types/mocha": "10.0.10",
     "@types/node": "24.19.2",
     "@types/vscode": "1.110.0",
-    "@typescript-eslint/eslint-plugin": "8.72.2",
-    "@typescript-eslint/parser": "8.72.2",
-    "@vscode/vsce": "4.0.0",
-    "eslint": "10.13.0",
+    "@typescript-eslint/eslint-plugin": "8.73.0",
+    "@typescript-eslint/parser": "8.73.0",
+    "@vscode/vsce": "4.1.1",
+    "eslint": "10.15.0",
     "mocha": "12.0.3",
-    "ovsx": "1.0.1",
+    "ovsx": "1.4.0",
     "ts-loader": "9.6.2",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "webpack": "5.112.2",
-    "webpack-cli": "7.2.3"
+    "webpack-cli": "7.3.1"
   },
   "packageManager": "pnpm@11.28.8+sha512.f6988a32046b9a3f78d7d7ee0747926bbe905ff9dff73bf19abb87bd7d1906a2ac90d93f73be32b5f9e14c2899569bcb0c9c5ec8a19e083f5d71bbab6dd9e0b8",
   "contributes": {
